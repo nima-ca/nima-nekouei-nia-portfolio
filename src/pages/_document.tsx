@@ -5,7 +5,7 @@ const DocumentPage: FC = () => {
     return (
         <Html lang="en">
             <Head />
-            <body>
+            <body className="dark:bg-neutral-900 light:bg-neutral-50">
                 <Main />
                 <NextScript />
             </body>

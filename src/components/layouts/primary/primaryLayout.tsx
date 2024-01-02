@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { FC, PropsWithChildren } from "react";
-import styles from "./primaryLayout.module.scss";
 
 export interface IPrimaryLayoutProps {
     pageTitle: string;
@@ -15,7 +14,7 @@ const PrimaryLayout: FC<PropsWithChildren<IPrimaryLayoutProps>> = ({
             <Head>
                 <title>{pageTitle}</title>
             </Head>
-            <main className={styles.main}>{children}</main>
+            {children}
         </>
     );
 };
