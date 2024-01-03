@@ -1,4 +1,5 @@
 import Providers from "@src/components/providers/providers";
+import SideNav from "@src/components/sideNav/sideNav";
 import "@src/styles/globals.scss";
 import { NextPageWithLayout } from "@src/types/page";
 import type { AppProps } from "next/app";
@@ -15,11 +16,12 @@ const App: FC<AppPropsWithLayout> = ({ Component, pageProps }) => {
     const getLayout = Component.getLayout ?? ((page) => page);
     return (
         <Providers>
-            {getLayout(
-                <main className={montserrat.className}>
-                    <Component {...pageProps} />
-                </main>,
-            )}
+            <main
+                className={`${montserrat.className} flex w-full flex-col lg:flex-row`}
+            >
+                <SideNav />
+                {getLayout(<Component {...pageProps} />)}
+            </main>
         </Providers>
     );
 };

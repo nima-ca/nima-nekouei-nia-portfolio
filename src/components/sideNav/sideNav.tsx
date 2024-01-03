@@ -11,7 +11,7 @@ interface SideNavProps {}
 
 const SideNav: FC<SideNavProps> = () => {
     return (
-        <section className="flex flex-col lg:w-1/3 lg:h-screen border-r-1 justify-between light:border-neutral-100 dark:border-neutral-800 p-20">
+        <section className="flex flex-col lg:w-1/3 border-r-1 justify-between light:border-neutral-100 dark:border-neutral-800 py-10 md:py-20 px-10 xl:p-20">
             <div className="flex flex-col gap-8">
                 <div className="flex items-center justify-between">
                     <Link href="/">
@@ -41,7 +41,7 @@ const SideNav: FC<SideNavProps> = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Download my Resume
+                        Download CV
                     </NextUILink>
                     <p className="opacity-70">or</p>
                     <NextUILink
