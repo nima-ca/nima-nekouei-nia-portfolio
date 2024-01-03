@@ -22,6 +22,10 @@ const DocumentPage: FC = () => {
                     sizes="16x16"
                     href="/favicons/favicon-16x16.png"
                 />
+                <meta
+                    name="description"
+                    content="Hi, I am a Front-End developer!"
+                />
             </Head>
             <body className="dark:bg-neutral-900 light:bg-neutral-50">
                 <Main />
