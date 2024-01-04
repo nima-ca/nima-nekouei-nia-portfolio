@@ -38,7 +38,8 @@ const SideNav: FC<SideNavProps> = () => {
                         <NextUILink
                             className="cursor-pointer text-neutral-900 dark:text-white"
                             underline="hover"
-                            href="/documents/Nima Nekouei Nia - Front End Developer.pdf"
+                            href="/documents/nima-nekouei-nia-cv.pdf"
+                            download={true}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
