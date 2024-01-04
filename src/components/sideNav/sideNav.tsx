@@ -1,4 +1,4 @@
-import profileImg from "@img/nima-profile.jpg";
+import profileImg from "@img/nima-profile.avif";
 import { Button, Link as NextUILink } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
