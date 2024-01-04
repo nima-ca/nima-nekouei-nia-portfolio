@@ -1,7 +1,9 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 import { FC } from "react";
 
 const DocumentPage: FC = () => {
+    const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
     return (
         <Html lang="en">
             <Head>
@@ -27,6 +29,19 @@ const DocumentPage: FC = () => {
                     content="Hi, I am a Front-End developer!"
                 />
             </Head>
+            <Script
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script strategy="lazyOnload" id="google-analytics">
+                {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', ${GA_MEASUREMENT_ID});
+        `}
+            </Script>
             <body className="dark:bg-neutral-900 light:bg-neutral-50">
                 <Main />
                 <NextScript />
